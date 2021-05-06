@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "2.7.6",
+    "badgen": "^3.2.2",
     "gatsby": "2.32.13",
     "gatsby-plugin-gatsby-cloud": "1.0.2",
     "gatsby-plugin-google-analytics": "2.11.0",
