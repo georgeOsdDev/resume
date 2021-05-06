@@ -4,11 +4,11 @@ import { badgen } from "badgen"
 
 // @FIXME
 // force render badge next to blog title
-const style = {
-  top: '-222px',
-  left: '234px',
-  position: 'relative'
-};
+// const style = {
+//   top: '-222px',
+//   left: '234px',
+//   position: 'relative'
+// };
 
 function Counter() {
   const [error, setError] = useState(null);
@@ -39,7 +39,7 @@ function Counter() {
     scale: 1
   })
   return (
-    <img src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} style={style}/>
+    <img src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} alt="view counter"/>
   );
 }
 
