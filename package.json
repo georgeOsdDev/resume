@@ -16,19 +16,19 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "^2.7.3",
-    "gatsby": "^2.25.3",
-    "gatsby-plugin-gatsby-cloud": "^1.0.1",
-    "gatsby-plugin-google-analytics": "^2.4.1",
-    "gatsby-plugin-manifest": "^2.5.2",
-    "gatsby-plugin-netlify": "^2.4.0",
-    "gatsby-plugin-offline": "^3.3.3",
-    "gatsby-plugin-sitemap": "^2.5.1",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.13",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@lekoarts/gatsby-theme-minimal-blog": "2.7.6",
+    "gatsby": "2.32.13",
+    "gatsby-plugin-gatsby-cloud": "1.0.2",
+    "gatsby-plugin-google-analytics": "2.11.0",
+    "gatsby-plugin-manifest": "2.12.1",
+    "gatsby-plugin-netlify": "2.11.1",
+    "gatsby-plugin-offline": "3.10.2",
+    "gatsby-plugin-sitemap": "2.12.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.22",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "7.0.3"
   }
 }
