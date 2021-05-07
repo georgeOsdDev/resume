@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage"
+    "test": "JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "2.7.6",
