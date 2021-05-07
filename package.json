@@ -9,11 +9,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "2.7.6",
@@ -27,10 +26,27 @@
     "gatsby-plugin-sitemap": "2.12.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.22",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "cross-env": "7.0.3"
+    "babel-jest": "^26.6.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
+    "lint-staged": "^10.5.4",
+    "node-fetch": "^2.6.1",
+    "prettier": "^2.2.1",
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,md}": "prettier --write"
   }
 }
