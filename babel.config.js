@@ -1,9 +1,24 @@
 module.exports = {
-  presets: [
-    ['@babel/preset-env', {
-      "targets": {
-        "node": "current"
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
       }
-    }],
-    '@babel/preset-react']
+    ]
+  ],
+  "env": {
+    "test": {
+      presets: [
+        ['@babel/preset-env', {
+          "targets": {
+            "node": "current"
+          }
+        }],
+        '@babel/preset-react'
+      ]
+    }
+  }
 };

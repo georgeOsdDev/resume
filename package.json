@@ -7,12 +7,12 @@
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
   "scripts": {
-    "build": "gatsby build",
+    "build": "NODE_ENV=production gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage",
+    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -32,6 +32,7 @@
   "devDependencies": {
     "babel-jest": "^26.6.3",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-gatsby": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
