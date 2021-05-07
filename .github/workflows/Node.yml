@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -27,6 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - run: npm ci
+    - run: cd api && npm ci
 
     - name: Unit test with coverage
       uses: mattallty/jest-github-action@v1

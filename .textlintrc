@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "@textlint/markdown": true
+  },
+  "filters": {
+        "comments": true
+  },
+  "rules": {
+    "preset-ja-technical-writing": true,
+  }
+}
