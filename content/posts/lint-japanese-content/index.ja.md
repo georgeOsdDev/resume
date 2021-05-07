@@ -14,7 +14,7 @@ canonicalUrl: "https://blog.toshida.org/lint-japanese-content"
 
 - VSCode の設定
 
-```js:title=.vscode/setting.json
+```json
 "textlint.configPath": ".textlintrc",
 "textlint.targetPath": "content/**/*.ja.md",
 "textlint.nodePath": "node_modules/.bin/textlint",
@@ -22,7 +22,7 @@ canonicalUrl: "https://blog.toshida.org/lint-japanese-content"
 
 - lint-staged の設定
 
-```json:title=package.json
+```json
 "lint-staged": {
   "*.{js,ts,tsx,css,md,mdx}": "prettier --write",
   "*.ja.md": "textlint"

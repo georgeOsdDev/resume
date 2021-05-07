@@ -4,3 +4,5 @@ lib/
 node_modules/
 public
 api/node_modules/
+src/@lekoarts/gatsby-theme-minimal-blog/components
+src/@lekoarts/gatsby-theme-minimal-blog/styles
