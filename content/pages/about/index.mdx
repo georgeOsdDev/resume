@@ -3,6 +3,27 @@ title: About
 slug: "/about"
 ---
 
-Hi!
+This website is genereated by [Gatsby](https://www.gatsbyjs.com/) using [@lekoarts/gatsby-theme-minimal-blog](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) theme.
 
-ダイアグラムとか
+Generated files are hosted on [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/).
+
+Source code can be found at [GitHub](https://github.com/georgeOsdDev/resume).
+
+![Diagram](./diagram.png)
+
+### ⚡ Architecture
+
+- [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/) for static file hosting.
+  - [Azure Functions](https://docs.microsoft.com/en-us/azure/static-web-apps/add-api) for access counter api.
+  - [Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-functions/functions-monitoring) for monitor function.
+  - [Custom Domain](https://docs.microsoft.com/en-us/azure/static-web-apps/custom-domain) using [App Service Domains](https://docs.microsoft.com/en-us/azure/app-service/manage-custom-dns-buy-domain) and [Azure DNS](https://azure.microsoft.com/en-us/services/dns/).
+- [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database/) with [Sequence Numbers](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers?view=sql-server-ver15) for data storage.
+
+### 🚀 Development
+
+- VS Code and [Azure Static Web Apps (Preview) extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) as editor.
+- [GitHub Actions](https://github.com/georgeOsdDev/resume/actions) for CI/CD.
+- [Gatsby](https://www.gatsbyjs.com/) and [@lekoarts/gatsby-theme-minimal-blog](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog) theme for site template.
+- [Jest](https://jestjs.io/) for testing.
+- [Pretitter](https://prettier.io/) for linting.
+- [MDX](https://mdxjs.com/) for writing content.
