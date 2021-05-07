@@ -10,4 +10,5 @@
   "azureFunctions.preDeployTask": "npm prune",
   "textlint.configPath": ".textlintrc",
   "textlint.targetPath": "content/**/*.ja.md",
+  "textlint.nodePath": "node_modules/.bin/textlint",
 }

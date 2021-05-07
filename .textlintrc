@@ -2,7 +2,9 @@
   "plugins": {
     "@textlint/markdown": true
   },
-  "filters": {},
+  "filters": {
+        "comments": true
+  },
   "rules": {
     "preset-ja-technical-writing": true,
   }
