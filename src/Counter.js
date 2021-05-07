@@ -16,7 +16,7 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:7071/api/SqlSequence")
+    fetch("/api/AccessCounter")
       .then(res => res.text())
       .then(
         (result) => {
@@ -30,7 +30,7 @@ function Counter() {
       )
   }, [])
 
-  const status = error ? error :
+  const status = error ? 'Error :(' :
                   !isLoaded ? 'Loading...' : count;
   const svgString = badgen({
     label: 'Views',
@@ -39,7 +39,7 @@ function Counter() {
     scale: 1
   })
   return (
-    <img src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} alt="view counter"/>
+    <img src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} alt={`Views: ${status}`}/>
   );
 }
 
