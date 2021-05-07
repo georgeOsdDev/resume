@@ -133,7 +133,7 @@ module.exports = {
   testMatch: [
     // "**/__tests__/**/*.[jt]s?(x)",
     // "**/?(*.)+(spec|test).[tj]s?(x)"
-    "**/*.test.ts"
+    "**/*.test.ts",
     //
     // "**/test/index.test.ts"
     // "**/test/apis/*.test.ts",
@@ -141,7 +141,7 @@ module.exports = {
     // "**/test/mediaStreamReader/*.test.ts",
     // "**/test/constants/*.test.ts",
     // "**/test/utils/*.test.ts"
-  ]
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

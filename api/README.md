@@ -1,6 +1,6 @@
 # prerequired
 
-## Create  SQL Database on Azure
+## Create SQL Database on Azure
 
 ## Create Blog schema
 
@@ -18,6 +18,7 @@ CREATE SEQUENCE Blog.Counter
 ```
 
 ## Save database info into application setting
+
 - `DB_USER`
 - `DB_PASS`
 - `DB_NAME`
