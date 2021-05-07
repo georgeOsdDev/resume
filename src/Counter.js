@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from "react"
-import { badgen } from "badgen"
+import React, { useState, useEffect } from "react";
+import { badgen } from "badgen";
 
 // @FIXME
 // force render badge next to blog title
@@ -17,29 +16,35 @@ function Counter() {
 
   useEffect(() => {
     fetch("/api/AccessCounter")
-      .then(res => res.text())
+      .then((res) => res.text())
       .then(
         (result) => {
           setIsLoaded(true);
-          setCount(result);
+          if (!isNaN(Number(result))) {
+            setCount(result);
+          } else {
+            setError("unexpected response");
+          }
         },
         (error) => {
           setIsLoaded(true);
           setError(error);
         }
-      )
-  }, [])
+      );
+  }, []);
 
-  const status = error ? 'Error :(' :
-                  !isLoaded ? 'Loading...' : count;
+  const status = error ? "Error :(" : !isLoaded ? "Loading..." : count;
   const svgString = badgen({
-    label: 'Views',
-    status : `${status}`,
-    color: 'blue',
-    scale: 1
-  })
+    label: "Views",
+    status: `${status}`,
+    color: "blue",
+    scale: 1,
+  });
   return (
-    <img src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`} alt={`Views: ${status}`}/>
+    <img
+      src={`data:image/svg+xml;utf8,${encodeURIComponent(svgString)}`}
+      alt={`Views: ${status}`}
+    />
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import Counter from "./Counter";
-global.fetch = require('node-fetch');
+global.fetch = require("node-fetch");
 
 let container = null;
 beforeEach(() => {
@@ -23,15 +23,15 @@ it("renders loading...", async () => {
     return {
       then: function () {
         return {
-          then: function(){}
-        }
-      }
-    }
+          then: function () {},
+        };
+      },
+    };
   });
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter/>, container);
+    render(<Counter />, container);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: Loading...`);
@@ -42,13 +42,13 @@ it("renders loading...", async () => {
 it("renders fetched count", async () => {
   jest.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({
-      text: () => Promise.resolve(10)
+      text: () => Promise.resolve(10),
     })
   );
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter/>, container);
+    render(<Counter />, container);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: ${10}`);
@@ -56,14 +56,29 @@ it("renders fetched count", async () => {
   global.fetch.mockRestore();
 });
 
-it("renders error", async () => {
+it("renders error if response is not number", async () => {
   jest.spyOn(global, "fetch").mockImplementation(() =>
-    Promise.reject('E')
+    Promise.resolve({
+      text: () => Promise.resolve("page not found"),
+    })
   );
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter/>, container);
+    render(<Counter />, container);
+  });
+
+  expect(container.querySelector("img").alt).toBe(`Views: Error :(`);
+  // remove the mock to ensure tests are completely isolated
+  global.fetch.mockRestore();
+});
+
+it("renders error", async () => {
+  jest.spyOn(global, "fetch").mockImplementation(() => Promise.reject("E"));
+
+  // Use the asynchronous version of act to apply resolved promises
+  await act(async () => {
+    render(<Counter />, container);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: Error :(`);
