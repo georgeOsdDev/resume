@@ -16,7 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "2.7.6",
+    "@lekoarts/gatsby-theme-minimal-blog": "3.0.0",
     "badgen": "3.2.2",
     "gatsby": "2.32.13",
     "gatsby-plugin-gatsby-cloud": "1.0.2",
