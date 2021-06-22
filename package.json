@@ -18,10 +18,10 @@
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "3.0.0",
     "badgen": "3.2.2",
-    "gatsby": "3.7.2",
-    "gatsby-plugin-manifest": "3.7.1",
-    "gatsby-plugin-offline": "4.7.1",
-    "gatsby-plugin-sitemap": "4.3.1",
+    "gatsby": "3.8.0",
+    "gatsby-plugin-manifest": "3.8.0",
+    "gatsby-plugin-offline": "4.8.0",
+    "gatsby-plugin-sitemap": "4.4.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.22",
     "react": "17.0.2",
     "react-icons": "4.2.0"
@@ -29,7 +29,7 @@
   "devDependencies": {
     "babel-jest": "26.6.3",
     "babel-preset-env": "1.7.0",
-    "babel-preset-gatsby": "1.7.1",
+    "babel-preset-gatsby": "1.8.0",
     "babel-preset-react": "6.24.1",
     "husky": "6.0.0",
     "jest": "26.6.3",
