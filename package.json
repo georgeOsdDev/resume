@@ -41,7 +41,7 @@
     "react-test-renderer": "17.0.2",
     "textlint": "12.0.0",
     "textlint-filter-rule-comments": "1.2.2",
-    "textlint-rule-preset-ja-technical-writing": "6.0.0"
+    "textlint-rule-preset-ja-technical-writing": "7.0.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx,css,md,mdx}": "prettier --write",
