@@ -12,7 +12,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage --outputFile=jest.results.json",
+    "test": "BABEL_ENV=test jest --testResultsProcessor='jest-junit' --collectCoverage --json --outputFile=jest.results.json",
     "prepare": "husky install"
   },
   "dependencies": {
