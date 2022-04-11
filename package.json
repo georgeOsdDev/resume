@@ -12,6 +12,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "pretest": "npx browserslist@latest --update-db",
     "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage",
     "prepare": "husky install"
   },
