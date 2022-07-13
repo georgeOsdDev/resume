@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "pretest": "npx browserslist@latest --update-db",
-    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest --testResultsProcessor='jest-junit' --collectCoverage",
+    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml jest",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -47,5 +47,9 @@
   "lint-staged": {
     "*.{js,ts,tsx,css,md,mdx}": "prettier --write",
     "*.ja.md": "textlint"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-junit",
+    "collectCoverage": true
   }
 }
