@@ -36,7 +36,7 @@
     "jest": "27.5.1",
     "jest-junit": "13.2.0",
     "lint-staged": "12.4.1",
-    "node-fetch": "2.6.7",
+    "node-fetch": "3.2.9",
     "prettier": "2.6.2",
     "react-dom": "18.1.0",
     "react-test-renderer": "18.1.0",
