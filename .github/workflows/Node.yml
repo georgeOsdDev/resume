@@ -28,7 +28,7 @@ jobs:
 
     - run: npm ci
     - run: cd api && npm ci
-
+    - run: npm test
     - name: Unit test with coverage
       uses: mattallty/jest-github-action@v1
       env:
