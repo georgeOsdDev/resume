@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "pretest": "npx browserslist@latest --update-db",
-    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml --outputFile='/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json'",
+    "test": "BABEL_ENV=test JEST_JUNIT_OUTPUT_DIR=test_results/junit/js-test-results.xml --outputFile='/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json' jest",
     "prepare": "husky install"
   },
   "dependencies": {
