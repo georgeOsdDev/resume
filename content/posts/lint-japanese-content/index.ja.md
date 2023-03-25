@@ -29,12 +29,12 @@ canonicalUrl: "https://blog.toshida.org/lint-japanese-content"
 }
 ```
 
-<!-- textlint-disable -->
+{/_<!-- textlint-disable -->_/}`
 
 [textlint-rule-preset-ja-technical-writing](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing) を使用しているので、
 この行は注意されます！?
 
-<!-- textlint-enabled-->
+{/_<!-- textlint-enabled-->_/}`
 
 のようにエラーレベルの指摘（この場合感嘆符が文章に含まれている）があると、以下のようにコミットができない。 [^1]
 
