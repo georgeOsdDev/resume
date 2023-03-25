@@ -5,7 +5,8 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import Counter from "./Counter";
-global.fetch = require("node-fetch");
+global.fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 let container = null;
 beforeEach(() => {
