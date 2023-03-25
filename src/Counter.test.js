@@ -3,22 +3,22 @@
  */
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
+import * as ReactDOMClient from "react-dom/client";
+
 import { act } from "react-dom/test-utils";
 import Counter from "./Counter";
 global.fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
+global.IS_REACT_ACT_ENVIRONMENT = true;
 
 let container = null;
 beforeEach(() => {
-  // setup a DOM element as a render target
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
+  document.body.removeChild(container);
   container = null;
 });
 
@@ -35,7 +35,7 @@ it("renders loading...", async () => {
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter />, container);
+    ReactDOMClient.createRoot(container).render(<Counter />);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: Loading...`);
@@ -52,7 +52,7 @@ it("renders fetched count", async () => {
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter />, container);
+    ReactDOMClient.createRoot(container).render(<Counter />);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: ${10}`);
@@ -69,7 +69,7 @@ it("renders error if response is not number", async () => {
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter />, container);
+    ReactDOMClient.createRoot(container).render(<Counter />);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: Error :(`);
@@ -82,7 +82,7 @@ it("renders error", async () => {
 
   // Use the asynchronous version of act to apply resolved promises
   await act(async () => {
-    render(<Counter />, container);
+    ReactDOMClient.createRoot(container).render(<Counter />);
   });
 
   expect(container.querySelector("img").alt).toBe(`Views: Error :(`);
