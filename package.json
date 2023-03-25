@@ -6,6 +6,9 @@
   "author": "Takeharu Oshida",
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "build": "NODE_ENV=production gatsby build",
     "develop": "gatsby develop",
@@ -17,21 +20,25 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "3.1.3",
+    "@lekoarts/gatsby-theme-minimal-blog": "^6.0.5",
     "badgen": "3.2.2",
-    "gatsby": "3.14.6",
-    "gatsby-plugin-manifest": "3.14.0",
-    "gatsby-plugin-offline": "4.14.0",
-    "gatsby-plugin-sitemap": "4.10.0",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.27",
-    "react": "18.1.0",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-feed": "^5.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "4.3.1"
   },
   "devDependencies": {
-    "babel-jest": "27.5.1",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-gatsby": "1.14.0",
-    "babel-preset-react": "6.24.1",
+    "@babel/preset-react": "^7.18.6",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "babel-jest": "^29.5.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-gatsby": "^3.8.0",
+    "cross-env": "^7.0.3",
     "husky": "8.0.1",
     "jest": "27.5.1",
     "jest-junit": "13.2.0",
@@ -42,7 +49,8 @@
     "react-test-renderer": "18.1.0",
     "textlint": "12.1.1",
     "textlint-filter-rule-comments": "1.2.2",
-    "textlint-rule-preset-ja-technical-writing": "7.0.0"
+    "textlint-rule-preset-ja-technical-writing": "7.0.0",
+    "typescript": "^4.9.4"
   },
   "lint-staged": {
     "*.{js,ts,tsx,css,md,mdx}": "prettier --write",
