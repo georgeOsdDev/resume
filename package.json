@@ -22,7 +22,7 @@
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^6.0.5",
     "badgen": "3.2.2",
-    "gatsby": "^5.5.0",
+    "gatsby": "^5.10.0",
     "gatsby-plugin-feed": "^5.5.0",
     "gatsby-plugin-manifest": "^5.5.0",
     "gatsby-plugin-sitemap": "^6.5.0",
